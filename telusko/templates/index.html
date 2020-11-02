@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--
 Template Name: Bistup
@@ -13,7 +14,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <title>Bistup</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -110,7 +111,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url({%static 'images/demo/backgrounds/01.png'%});">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
@@ -168,7 +169,7 @@ Licence URI: https://www.os-templates.com/template-terms
       </div>
       <ul class="nospace group overview">
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Posuere nisl lorem</h6>
               <p>Nisi egestas nunc nibh urna molestie in gravida vel tincidunt.</p>
@@ -176,7 +177,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Curabitur vestibulum</h6>
               <p>Id metus aliquam id fringilla dui duis scelerisque sed mi.</p>
@@ -184,7 +185,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Hendrerit leo vestibulum</h6>
               <p>Sed varius sed ex eros accumsan eget nisl a laoreet porta.</p>
@@ -192,7 +193,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Euismod urna sed</h6>
               <p>Urna vestibulum suscipit lacus quis odio vestibulum venenatis.</p>
@@ -200,7 +201,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Tincidunt a posuere</h6>
               <p>Phasellus vel hendrerit lorem sed tristique lacus in auctor.</p>
@@ -208,7 +209,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
         <li class="one_third">
-          <figure><a href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <figure><a href="#"><img src="{% static 'images/demo/348x261.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Posuere elit vel</h6>
               <p>Euismod libero sodales ut cum sociis natoque penatibus et magnis.</p>
@@ -297,10 +298,10 @@ Licence URI: https://www.os-templates.com/template-terms
   <figure class="hoc container clear clients"> 
     <!-- ################################################################################################ -->
     <ul class="nospace group">
-      <li class="one_quarter first"><a href="#"><img src="images/demo/249x100.png" alt=""></a></li>
-      <li class="one_quarter"><a href="#"><img src="images/demo/249x100.png" alt=""></a></li>
-      <li class="one_quarter"><a href="#"><img src="images/demo/249x100.png" alt=""></a></li>
-      <li class="one_quarter"><a href="#"><img src="images/demo/249x100.png" alt=""></a></li>
+      <li class="one_quarter first"><a href="#"><img src="{% static 'images/demo/249x100.png' %}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{% static 'images/demo/249x100.png' %}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{% static 'images/demo/249x100.png' %}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{% static 'images/demo/249x100.png' %}" alt=""></a></li>
     </ul>
     <!-- ################################################################################################ -->
   </figure>
@@ -380,8 +381,8 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="{%static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{%static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{%static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
 </body>
 </html>
