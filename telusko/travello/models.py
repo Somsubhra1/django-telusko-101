@@ -9,3 +9,6 @@ class Destination(models.Model):
     desc = models.TextField()
     price = models.IntegerField()
     offer = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
