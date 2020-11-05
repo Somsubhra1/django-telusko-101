@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "calc",
-    "travello"
+    "travello",
+    "accounts"
 ]
 
 MIDDLEWARE = [
