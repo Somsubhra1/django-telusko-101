@@ -11,20 +11,24 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Loading dotenv file
+load_dotenv(os.path.join(BASE_DIR, "telusko", ".env"))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'm4$50r86dz6h$7xa1ix82f2jzfwqrj-pdi%c=dg!p=amnv)l#j'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if os.environ.get("ENVIRONMENT") == "development" else False
 
 ALLOWED_HOSTS = []
 
@@ -80,10 +84,10 @@ WSGI_APPLICATION = 'telusko.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'telusko',
-        'USER': 'postgres',
-        'PASSWORD': "123456",
-        "HOST": "localhost"
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASS"),
+        "HOST": os.environ.get("DB_HOST")
     }
 }
 

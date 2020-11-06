@@ -10,6 +10,7 @@ autopep8 = "*"
 django = "*"
 psycopg2-binary = "*"
 pillow = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"
