@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -37,6 +38,8 @@ def register(request):
 
         # return redirect("/")
     else:
+        if request.user.is_authenticated:
+            return redirect("/")
         return render(request, "register.html")
 
 
@@ -56,9 +59,12 @@ def login(request):
             return redirect("accounts:login")
 
     else:
+        if request.user.is_authenticated:
+            return redirect("/")
         return render(request, "login.html")
 
 
+@login_required()
 def logout(request):
     auth.logout(request)
     return redirect("/")
